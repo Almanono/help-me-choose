@@ -6,14 +6,29 @@
     <link href="./main.css" rel="stylesheet" type="text/css"
   </head>
   <body>
-    <h1>Help me choose between...</h1>
+    <h1 >Help me choose between...</h1>
     <img src="https://cdn.gearpatrol.com/wp-content/uploads/2016/04/gear-patorl-runningshoes-ambiance.jpg" alt="Shoes"width="670" height="350">
     <div class="inputSection">
       <div class="inputs">
         <input placeholder="Type of shoe"></input>
       </div>
-      <button class="addOption">ADD</button>
+      <button class="addOption">Add</button>
     </div>
-      <button>GO</button>
+    <div class="resultSection"></div>
+      <button>Go!</button>
+
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script>
+      $ (function() {
+        $('.resultSection').hide()
+
+        var add_option = function () {
+          $('.inputs').append('<input></input>')
+        }
+
+        $('.addOption').click(add_option)
+
+      })
+      </script>
   </body>
   </html>
